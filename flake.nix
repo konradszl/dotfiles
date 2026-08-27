@@ -64,7 +64,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.konrad = import ./nix/home.nix;
+            home-manager.users.konrad = import ./nix/home;
           }
         ];
       };

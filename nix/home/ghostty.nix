@@ -1,20 +1,9 @@
-{ config, pkgs, ... }:
+{ ... }:
 
 {
-  home.stateVersion = "26.05";
-  home.packages = with pkgs; [
-    neovim
-    lazygit
-    ripgrep
-  ];
-  home.sessionVariables = {
-    DG_HOME = "${config.home.homeDirectory}/Developer/Work/Dataglide";
-  };
-  home.sessionPath = [ "${config.home.homeDirectory}/.local/bin" ];
-
   xdg.configFile = {
-    "ghostty/themes/glimwick-ember".source = ../theme/ghostty/glimwick-ember;
-    "ghostty/themes/glimwick-taper".source = ../theme/ghostty/glimwick-taper;
+    "ghostty/themes/glimwick-ember".source = ../../theme/ghostty/glimwick-ember;
+    "ghostty/themes/glimwick-taper".source = ../../theme/ghostty/glimwick-taper;
   };
 
   programs.ghostty = {
@@ -37,13 +26,5 @@
       cursor-style-blink = true;
       shell-integration-features = "no-cursor";
     };
-  };
-
-  programs.zsh = {
-    enable = true;
-    initContent = ''
-      export PATH="$HOME/.rbenv/bin:$PATH"
-      eval "$(rbenv init - zsh)"
-    '';
   };
 }
