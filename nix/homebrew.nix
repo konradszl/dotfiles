@@ -21,11 +21,13 @@
       "protonvpn"
       "proton-mail"
       "docker-desktop"
+      "google-chrome"
       "jetbrains-toolbox"
       "windows-app"
       "microsoft-teams"
       "microsoft-excel"
       "microsoft-azure-storage-explorer"
+      "corretto@25"
     ];
 
     brews = [
