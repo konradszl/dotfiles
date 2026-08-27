@@ -41,32 +41,12 @@
       homebrew-core,
       homebrew-cask,
     }:
-    let
-      configuration = { pkgs, config, ... }: {
-        environment.systemPackages = with pkgs; [
-          git
-          vim
-        ];
-
-        fonts.packages = with pkgs; [
-          nerd-fonts.caskaydia-cove
-        ];
-
-        nix.settings.experimental-features = "nix-command flakes";
-
-        system.configurationRevision = self.rev or self.dirtyRev or null;
-        system.stateVersion = 6;
-        system.primaryUser = "konrad";
-
-        nixpkgs.hostPlatform = "aarch64-darwin";
-      };
-    in
     {
       darwinConfigurations."Macbook" = nix-darwin.lib.darwinSystem {
+        specialArgs = { inherit inputs self; };
         modules = [
           ./nix/homebrew.nix
           ./nix/darwin.nix
-          configuration
           nix-homebrew.darwinModules.nix-homebrew
           {
             nix-homebrew = {
