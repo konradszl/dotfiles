@@ -22,4 +22,16 @@
   system.primaryUser = "konrad";
 
   nixpkgs.hostPlatform = "aarch64-darwin";
+
+  # Dock settings
+  system.defaults.dock.autohide = true;
+  system.defaults.dock.autohide-delay = 0.01;
+  system.defaults.dock.show-recents = false;
+  system.defaults.dock.persistent-apps = [
+    { app = "/Applications/Claude.app"; }
+    { app = "/Applications/Ghostty.app"; }
+  ];
+  system.defaults.dock.persistent-others = [
+    { folder = "/Users/konrad/Downloads"; }
+  ];
 }
