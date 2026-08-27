@@ -10,7 +10,7 @@
       url = "github:nix-darwin/nix-darwin/nix-darwin-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    
+
     nix-homebrew = {
       url = "github:zhaofengli/nix-homebrew";
     };
@@ -31,53 +31,64 @@
     };
   };
 
-  outputs = inputs@{ self, nixpkgs, nix-darwin, home-manager, nix-homebrew, homebrew-core, homebrew-cask }:
-  let
-    configuration = { pkgs, config, ... }: {
-      environment.systemPackages = with pkgs; [
-	git
-	vim
-      ];
+  outputs =
+    inputs@{
+      self,
+      nixpkgs,
+      nix-darwin,
+      home-manager,
+      nix-homebrew,
+      homebrew-core,
+      homebrew-cask,
+    }:
+    let
+      configuration = { pkgs, config, ... }: {
+        environment.systemPackages = with pkgs; [
+          git
+          vim
+        ];
 
-      fonts.packages = with pkgs; [
-        nerd-fonts.caskaydia-cove
-      ];
+        fonts.packages = with pkgs; [
+          nerd-fonts.caskaydia-cove
+        ];
 
-      nix.settings.experimental-features = "nix-command flakes";
+        nix.settings.experimental-features = "nix-command flakes";
 
-      system.configurationRevision = self.rev or self.dirtyRev or null;
-      system.stateVersion = 6;
-      system.primaryUser = "konrad";
+        system.configurationRevision = self.rev or self.dirtyRev or null;
+        system.stateVersion = 6;
+        system.primaryUser = "konrad";
 
-      nixpkgs.hostPlatform = "aarch64-darwin";
+        nixpkgs.hostPlatform = "aarch64-darwin";
+      };
+    in
+    {
+      darwinConfigurations."Macbook" = nix-darwin.lib.darwinSystem {
+        modules = [
+          ./nix/homebrew.nix
+          ./nix/darwin.nix
+          configuration
+          nix-homebrew.darwinModules.nix-homebrew
+          {
+            nix-homebrew = {
+              enable = true;
+              enableRosetta = true;
+              user = "konrad";
+              taps = {
+                "homebrew/homebrew-core" = homebrew-core;
+                "homebrew/homebrew-cask" = homebrew-cask;
+              };
+              mutableTaps = false;
+            };
+          }
+          home-manager.darwinModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.konrad = import ./nix/home.nix;
+          }
+        ];
+      };
+
+      formatter.aarch64-darwin = nixpkgs.legacyPackages.aarch64-darwin.nixfmt-tree;
     };
-  in
-  {
-    darwinConfigurations."Macbook" = nix-darwin.lib.darwinSystem {
-      modules = [ 
-        ./nix/homebrew.nix
-        ./nix/darwin.nix
-        configuration
-	nix-homebrew.darwinModules.nix-homebrew 
-	{
-          nix-homebrew = {
-            enable = true;
-	    enableRosetta = true;
-	    user = "konrad";
-	    taps = {
-              "homebrew/homebrew-core" = homebrew-core;
-	      "homebrew/homebrew-cask" = homebrew-cask;
-	    };
-	    mutableTaps = false;
-	  };
-	}
-	home-manager.darwinModules.home-manager
-	{
-	  home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-	  home-manager.users.konrad = import ./nix/home.nix;
-	}
-      ];
-    };
-  };
 }
