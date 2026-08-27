@@ -4,11 +4,11 @@
   imports = [
     ./ghostty.nix
     ./zsh.nix
+    ./neovim.nix
   ];
 
   home.stateVersion = "26.05";
   home.packages = with pkgs; [
-    neovim
     lazygit
     ripgrep
   ];
