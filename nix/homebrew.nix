@@ -47,7 +47,7 @@
       "easy-csv-editor" = 1171346381;
       "xcode" = 497799835;
       "numbers" = 361304891;
-      
+
       # Safari extensions
       "1password-for-safari" = 1569813296;
       "ublock-origin-lite" = 6745342698;
