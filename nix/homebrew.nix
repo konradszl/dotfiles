@@ -32,6 +32,7 @@
 
     brews = [
       "mas"
+      "maven"
       "rbenv"
       "ruby-build"
       "dotnet"
