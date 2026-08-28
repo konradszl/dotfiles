@@ -2,8 +2,8 @@
 
 {
   xdg.configFile = {
-    "ghostty/themes/glimwick-ember".source = ../../theme/ghostty/glimwick-ember;
-    "ghostty/themes/glimwick-taper".source = ../../theme/ghostty/glimwick-taper;
+    "ghostty/themes/glimwick-ember".source = ../../config/ghostty/themes/glimwick-ember;
+    "ghostty/themes/glimwick-taper".source = ../../config/ghostty/themes/glimwick-taper;
   };
 
   programs.ghostty = {
