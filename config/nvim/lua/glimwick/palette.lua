@@ -31,10 +31,11 @@ M.ember = {
   plum      = "#A47BAD",
   sakura    = "#DAA6CC",
   -- diff backgrounds
-  diff_add    = "#1E291C",
-  diff_delete = "#2E1D1B",
-  diff_change = "#2A231A",
-  diff_text   = "#3B301F",
+  diff_add      = "#1E3222",
+  diff_delete   = "#3A1C1A",
+  diff_change   = "#382F1B",
+  diff_text     = "#4E3E20",
+  diff_conflict = "#3A263E",
 }
 
 M.taper = {
@@ -68,10 +69,11 @@ M.taper = {
   plum      = "#61296C",
   sakura    = "#8C497C",
   -- diff backgrounds
-  diff_add    = "#D7E3C3",
-  diff_delete = "#EFD3CD",
-  diff_change = "#EEDFBA",
-  diff_text   = "#E3D09D",
+  diff_add      = "#CFE0B8",
+  diff_delete   = "#F0C9C2",
+  diff_change   = "#F0DFAF",
+  diff_text     = "#E6CE93",
+  diff_conflict = "#DECBE6",
 }
 
 return M
