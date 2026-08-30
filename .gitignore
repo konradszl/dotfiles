@@ -4,3 +4,9 @@
 
 result
 result-*
+
+config/jetbrains/*/.idea/workspace.xml
+config/jetbrains/*/.idea/usage.statistics.xml
+config/jetbrains/*/.idea/shelf/
+config/jetbrains/*/out/
+config/jetbrains/*/*.jar
