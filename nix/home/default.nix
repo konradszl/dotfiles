@@ -17,6 +17,14 @@
     ripgrep
   ];
 
+  programs.go = {
+    enable = true;
+    env = {
+      GOPATH = "${config.home.homeDirectory}/Developer/SDKs/go";
+      GOBIN = "${config.home.homeDirectory}/.local/bin";
+    };
+  };
+
   home.sessionVariables = {
     DG_HOME = "${config.home.homeDirectory}/Developer/Work/Dataglide";
   };
