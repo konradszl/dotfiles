@@ -12,6 +12,8 @@
     uv
     fd
     lazygit
+    lazydocker
+    dive
     ripgrep
   ];
 
