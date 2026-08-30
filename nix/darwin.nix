@@ -22,6 +22,7 @@
   system.primaryUser = "konrad";
 
   nixpkgs.hostPlatform = "aarch64-darwin";
+  nixpkgs.config.allowUnfree = true;
 
   # Dock settings
   system.defaults.dock.autohide = true;
