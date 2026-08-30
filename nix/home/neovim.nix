@@ -5,8 +5,20 @@
     enable = true;
     defaultEditor = true;
     sideloadInitLua = true;
+
     extraPackages = with pkgs; [
       tree-sitter
+
+      # Language servers
+      gopls
+      basedpyright
+      vtsls
+      nixd
+      lua-language-server
+
+      # Formatters and linters, driven by conform.nvim
+      ruff
+      stylua
     ];
   };
 
