@@ -42,7 +42,7 @@
       homebrew-cask,
     }:
     {
-      darwinConfigurations."Macbook" = nix-darwin.lib.darwinSystem {
+      darwinConfigurations."MacBook" = nix-darwin.lib.darwinSystem {
         specialArgs = { inherit inputs self; };
         modules = [
           ./nix/homebrew.nix

@@ -9,11 +9,21 @@
   environment.systemPackages = with pkgs; [
     git
     vim
+
+    # TMC CLI for the University of Helsinki Java MOOC.
+    # Remove once the course is finished.
+    (pkgs.callPackage ./pkgs/tmc-cli.nix { })
   ];
 
   fonts.packages = with pkgs; [
     nerd-fonts.caskaydia-cove
   ];
+
+  networking = {
+    computerName  = "MacBook";
+    hostName      = "MacBook";
+    localHostName = "MacBook";
+  };
 
   nix.settings.experimental-features = "nix-command flakes";
 
