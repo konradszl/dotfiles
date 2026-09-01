@@ -27,6 +27,7 @@
       "microsoft-teams"
       "microsoft-excel"
       "microsoft-azure-storage-explorer"
+      "corretto@21"
       "corretto@25"
     ];
 
