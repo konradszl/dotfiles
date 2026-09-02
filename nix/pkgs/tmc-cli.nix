@@ -26,6 +26,7 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     cp $src $out/share/tmc-cli/tmc-cli.jar
 
     makeWrapper ${jdk21}/bin/java $out/bin/tmc \
+      --add-flags "--add-opens java.base/java.lang=ALL-UNNAMED" \
       --add-flags "-jar $out/share/tmc-cli/tmc-cli.jar --no-update" \
       --prefix PATH : ${lib.makeBinPath [ jdk21 maven ]}
 
