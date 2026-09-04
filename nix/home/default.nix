@@ -27,6 +27,8 @@
     };
   };
 
+  programs.direnv.enable = true;
+
   home.sessionVariables = {
     DG_HOME = "${config.home.homeDirectory}/Developer/Work/Dataglide";
   };
