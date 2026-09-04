@@ -36,7 +36,7 @@
         <option name="HTML_TAG_TREE_LEVEL3" value="85B5D2"/>
         <option name="HTML_TAG_TREE_LEVEL4" value="89C5CC"/>
         <option name="HTML_TAG_TREE_LEVEL5" value="A47BAD"/>
-        <option name="INDENT_GUIDE" value="221D17"/>
+        <option name="INDENT_GUIDE" value="372F24"/>
         <option name="INFORMATION_HINT" value="221D17"/>
         <option name="INLINE_REFACTORING_SETTINGS_DEFAULT" value="252019"/>
         <option name="INLINE_REFACTORING_SETTINGS_FOCUSED" value="29241C"/>
@@ -44,7 +44,7 @@
         <option name="LINE_NUMBERS_COLOR" value="4E4636"/>
         <option name="LINE_NUMBER_ON_CARET_ROW_COLOR" value="F2B56C"/>
         <option name="LOOKUP_COLOR" value="221D17"/>
-        <option name="MATCHED_BRACES_INDENT_GUIDE_COLOR" value="4E4636"/>
+        <option name="MATCHED_BRACES_INDENT_GUIDE_COLOR" value="665C48"/>
         <option name="METHOD_SEPARATORS_COLOR" value="221D17"/>
         <option name="MODIFIED_LINES_COLOR" value="ECD08C"/>
         <option name="MODIFIED_TAB_ICON" value="85B5D2"/>
@@ -53,7 +53,7 @@
         <option name="QUESTION_HINT" value="221D17"/>
         <option name="RECENT_LOCATIONS_SELECTION" value="221D17"/>
         <option name="RIGHT_MARGIN_COLOR" value="221D17"/>
-        <option name="SELECTED_INDENT_GUIDE" value="372F24"/>
+        <option name="SELECTED_INDENT_GUIDE" value="665C48"/>
         <option name="SELECTED_TEARLINE_COLOR" value="2C261D"/>
         <option name="SELECTION_BACKGROUND" value="2C261D"/>
         <option name="SELECTION_FOREGROUND" value=""/>
@@ -65,7 +65,7 @@
         <option name="VCS_ANNOTATIONS_COLOR_3" value="513F2A"/>
         <option name="VCS_ANNOTATIONS_COLOR_4" value="403223"/>
         <option name="VCS_ANNOTATIONS_COLOR_5" value="2E251C"/>
-        <option name="VISUAL_INDENT_GUIDE" value="221D17"/>
+        <option name="VISUAL_INDENT_GUIDE" value="372F24"/>
         <option name="WHITESPACES" value="372F24"/>
         <option name="WHITESPACES_MODIFIED_LINES_COLOR" value="4E4636"/>
         <option name="ScrollBar.thumbColor" value="221D17"/>
