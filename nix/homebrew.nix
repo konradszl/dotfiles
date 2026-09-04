@@ -39,6 +39,7 @@
       "dotnet"
       "freetds"
       "azcopy"
+      "azure/functions/azure-functions-core-tools@4"
       "azure-cli"
       "curl"
     ];

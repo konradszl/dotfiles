@@ -29,6 +29,11 @@
       url = "github:homebrew/homebrew-cask";
       flake = false;
     };
+
+    homebrew-functions = {
+      url = "github:Azure/homebrew-functions";
+      flake = false;
+    };
   };
 
   outputs =
@@ -40,6 +45,7 @@
       nix-homebrew,
       homebrew-core,
       homebrew-cask,
+      homebrew-functions,
     }:
     {
       darwinConfigurations."MacBook" = nix-darwin.lib.darwinSystem {
@@ -56,6 +62,7 @@
               taps = {
                 "homebrew/homebrew-core" = homebrew-core;
                 "homebrew/homebrew-cask" = homebrew-cask;
+                "azure/homebrew-functions" = homebrew-functions;
               };
               mutableTaps = false;
             };
