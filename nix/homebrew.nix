@@ -12,12 +12,15 @@
 
     casks = [
       "ghostty"
+      "figma"
       "1password"
       "karabiner-elements"
       "raycast"
       "textmate"
+      "discord"
       "forklift"
-      "hiddenbar"
+      "thaw"
+      "qgroundcontrol"
       "claude"
       "protonvpn"
       "proton-mail"
