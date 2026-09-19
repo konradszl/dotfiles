@@ -11,6 +11,8 @@ M.ember = {
   overlay0  = "#4E4636",
   overlay1  = "#665C48",
   overlay2  = "#7E735B",
+  -- selection
+  selection = "#3C4950",
   -- text
   subtext0  = "#8E8372",
   subtext1  = "#B1AA9C",
@@ -49,6 +51,8 @@ M.taper = {
   overlay0  = "#ABA094",
   overlay1  = "#968B7E",
   overlay2  = "#817668",
+  -- selection
+  selection = "#99B9BD",
   -- text
   subtext0  = "#6A5B48",
   subtext1  = "#514537",
