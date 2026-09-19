@@ -74,7 +74,8 @@ IDEs:
 ```sh
 cd config/jetbrains/glimwick
 jar cf glimwick.jar -C resources META-INF -C resources theme
-for d in ~/Library/Application\ Support/JetBrains/*/plugins/glimwick.jar; do
+for d in ~/Library/Application\ Support/JetBrains/*/plugins/; do
+  case "$d" in */Toolbox/*) continue;; esac
   cp glimwick.jar "$d"
 done
 ```
