@@ -40,6 +40,7 @@
       "rbenv"
       "ruby-build"
       "dotnet"
+      "dotnet@8"
       "freetds"
       "azcopy"
       "azure/functions/azure-functions-core-tools@4"
