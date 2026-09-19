@@ -6,7 +6,8 @@
     taps = builtins.attrNames config.nix-homebrew.taps;
     onActivation = {
       autoUpdate = true;
-      cleanup = "uninstall";
+      upgrade = true;
+      cleanup = "zap";
     };
 
     casks = [
