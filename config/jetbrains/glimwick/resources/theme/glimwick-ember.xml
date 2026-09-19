@@ -398,13 +398,13 @@
         </option>
         <option name="IDENTIFIER_UNDER_CARET_ATTRIBUTES">
             <value>
-                <option name="BACKGROUND" value="2C261D"/>
+                <option name="BACKGROUND" value="372F24"/>
                 <option name="ERROR_STRIPE_COLOR" value="4E4636"/>
             </value>
         </option>
         <option name="WRITE_IDENTIFIER_UNDER_CARET_ATTRIBUTES">
             <value>
-                <option name="BACKGROUND" value="372F24"/>
+                <option name="BACKGROUND" value="4E4636"/>
                 <option name="ERROR_STRIPE_COLOR" value="4E4636"/>
             </value>
         </option>
