@@ -71,7 +71,10 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.konrad = import ./nix/home;
+            home-manager.users.konrad.imports = [
+              ./nix/home
+              ./nix/home/darwin.nix
+            ];
           }
         ];
       };

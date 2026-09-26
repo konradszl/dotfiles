@@ -8,7 +8,6 @@
 
   programs.ghostty = {
     enable = true;
-    package = null;
     enableZshIntegration = true;
     settings = {
       theme = "glimwick-ember";
