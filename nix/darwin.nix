@@ -20,8 +20,8 @@
   ];
 
   networking = {
-    computerName  = "MacBook";
-    hostName      = "MacBook";
+    computerName = "MacBook";
+    hostName = "MacBook";
     localHostName = "MacBook";
   };
 

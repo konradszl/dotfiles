@@ -1,9 +1,10 @@
-{ lib
-, stdenvNoCC
-, fetchurl
-, makeWrapper
-, jdk21
-, maven
+{
+  lib,
+  stdenvNoCC,
+  fetchurl,
+  makeWrapper,
+  jdk21,
+  maven,
 }:
 
 stdenvNoCC.mkDerivation (finalAttrs: {
@@ -28,7 +29,12 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     makeWrapper ${jdk21}/bin/java $out/bin/tmc \
       --add-flags "--add-opens java.base/java.lang=ALL-UNNAMED" \
       --add-flags "-jar $out/share/tmc-cli/tmc-cli.jar --no-update" \
-      --prefix PATH : ${lib.makeBinPath [ jdk21 maven ]}
+      --prefix PATH : ${
+        lib.makeBinPath [
+          jdk21
+          maven
+        ]
+      }
 
     runHook postInstall
   '';

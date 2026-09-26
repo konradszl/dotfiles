@@ -16,12 +16,12 @@ On a fresh machine, from the top:
 curl -sSf -L https://install.lix.systems/lix | sh -s -- install
 
 # 2. Clone to this exact path (see Gotchas) 
-mkdir -p ~/Developer/Personal/github.com
-git clone git@github.com:konradszl/dotfiles.git ~/Developer/Personal/github.com/dotfiles
-ln -s ~/Developer/Personal/github.com/dotfiles ~/Developer/Personal/dotfiles # optional
+mkdir -p ~/Developer/Personal/github.com/konradszl
+git clone git@github.com:konradszl/dotfiles.git ~/Developer/Personal/github.com/konradszl/dotfiles
+ln -s ~/Developer/Personal/github.com/konradszl/dotfiles ~/Developer/Personal/dotfiles # optional
 
 # 3. First switch. darwin-rebuild does not exist yet, so go through nix run
-cd ~/Developer/Personal/github.com/dotfiles
+cd ~/Developer/Personal/github.com/konradszl/dotfiles
 nix run nix-darwin/nix-darwin-26.05#darwin-rebuild -- switch --flake .#MacBook
 ```
 
@@ -55,7 +55,7 @@ the attribute from the hostname.
 ## Gotchas
 
 **The repo path is load-bearing.** `nix/home/neovim.nix` points at
-`~/Developer/Personal/github.com/dotfiles/config/nvim` through `mkOutOfStoreSymlink`,
+`~/Developer/Personal/github.com/konradszl/dotfiles/config/nvim` through `mkOutOfStoreSymlink`,
 so the nvim config stays editable without a rebuild. Clone anywhere else and nvim comes
 up unconfigured with no error. `~/Developer/Personal/dotfiles` is a symlink to the same
 place.
