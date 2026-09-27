@@ -75,10 +75,29 @@
               ./nix/home
               ./nix/home/darwin.nix
             ];
+            home-manager.backupFileExtension = "backup";
+          }
+        ];
+      };
+
+      nixosConfigurations."Thinkpad" = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs self; };
+        modules = [
+          ./nix/nixos.nix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.konrad.imports = [
+              ./nix/home
+              ./nix/home/nixos.nix
+            ];
+            home-manager.backupFileExtension = "backup";
           }
         ];
       };
 
       formatter.aarch64-darwin = nixpkgs.legacyPackages.aarch64-darwin.nixfmt-tree;
+      formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-tree;
     };
 }
