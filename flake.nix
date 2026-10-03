@@ -80,7 +80,7 @@
         ];
       };
 
-      nixosConfigurations."Thinkpad" = nixpkgs.lib.nixosSystem {
+      nixosConfigurations."ThinkPad" = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs self; };
         modules = [
           ./nix/nixos.nix
