@@ -25,6 +25,7 @@
     extraGroups = [
       "wheel"
       "networkmanager"
+      "libvirtd"
     ];
     shell = pkgs.zsh;
   };
@@ -34,6 +35,10 @@
   programs.hyprland.enable = true;
   programs._1password.enable = true;
   programs._1password-gui.enable = true;
+  programs.virt-manager.enable = true;
+
+  virtualisation.libvirtd.enable = true;
+  virtualisation.spiceUSBRedirection.enable = true;
 
   environment.systemPackages = with pkgs; [
     vim
