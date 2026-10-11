@@ -40,6 +40,11 @@
   virtualisation.libvirtd.enable = true;
   virtualisation.spiceUSBRedirection.enable = true;
 
+  services.openssh = {
+    enable = true;
+    settings.PasswordAuthentication = false;
+  };
+
   environment.systemPackages = with pkgs; [
     vim
     wget
